@@ -6,8 +6,8 @@
 
 
 :root {
-	--color-neutral-light:#ccc;
-	--color-neutral-medium:#444fe4;
+	--color-neutral-light:#dadada;
+	--color-neutral-medium:#80a7ff;
 	--color-neutral-dark:#3d3c44;
 
 	--color-white:#fff;
@@ -17,15 +17,15 @@
 	--header-height: 4rem;
 
 
-	--font-sans: Helvetica, Arial, sans-serif;
-	--font-serif: Cambria, Georgia, "Times New Roman", serif;
+	--font-sans: montserrat, Helvetica, sans-serif;
+	--font-serif: "Academy Engraved LET Plain:1.0, Georgia", serif;
 }
 
 
 body {
 	margin: 0;
 	font-size: 100%;
-	font-family:var(--font-sans);
+	font-family:montserrat;
 
 }
 
@@ -36,7 +36,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family:var(--font-sans);
+	font-family: var(--font-sans);
 }
 
 
@@ -48,7 +48,7 @@ a {
 
 
 a:hover {
-	text-decoration: underline;
+	font-size: 110%;
 }
 
 
@@ -88,7 +88,7 @@ a:hover {
 /* COMPONENT CLASSES */
 
 .navbar {
-	background-color: white;
+	background-color: transparent;
 	color: #444fe4;
 	line-height: var(--header-height);
 }
@@ -119,10 +119,20 @@ a:hover {
 
 
 
+hr {
+	width: 15%;
+	margin-top: 55px;
+	position: relative;
+	right: 33%;
+
+}
+
+
+
 .section_title {
 	color: #444fe4;
 	font-family: "Montserrat";
-	font-size: 40px;
+	font-size: 33px;
 	text-align: center;
 	padding-top: 1em;
 }
@@ -209,6 +219,7 @@ a:hover {
 }
 
 
+/* CARD */
 
 .card.soft {
 	border-radius: 1em;
@@ -243,6 +254,17 @@ a:hover {
 }
 
 
+.card>:first-child { margin-top: 35px; }
+.card>:last-child { margin-bottom: 0; }
+
+
+/* WELL */
+
+.well {
+	background-color: var(--color-neutral-medium);
+	padding: 0.5em;
+	border-radius: 0.2em;
+}
 
 
 /* VIEW WINDOW */
@@ -255,7 +277,7 @@ a:hover {
 	background-position: center;
 	background-attachment: fixed;
 
-	height: 45vh;
+	height: 92vh;
 }
 
 

@@ -6,7 +6,9 @@
 	<title>Cool Website</title>
 
 	<link rel="stylesheet" href="lib/css/styleguide.css">
+	<link rel="stylesheet" href="lib/css/gridsystem.css">
 	<link rel="stylesheet" href="css/storetheme.css">
+
 </head>
 <body>
 
@@ -38,13 +40,13 @@
 	</div>
 
 
-	<div>
+<!-- 	<div>
 		<h2 id="ourstory" class="section_title">Our Story</h2>
-	</div>
+	</div> -->
 
 
 	<!-- .container>article#article$.article*4>h2{Article $}+div.article-body>p*4>lorem40 -->
-	<div class="container">
+<!-- 	<div class="container">
 		<article class="article card story">
 			<h2>Article 1</h2>
 			<div class="article-body">
@@ -54,27 +56,80 @@
 				<p>Ullam ipsa qui maiores a esse ut, ipsam maxime dignissimos quisquam quasi, laboriosam dolor. Doloremque labore repellendus illo voluptate, a explicabo sunt illum delectus laudantium eius itaque, recusandae distinctio ex modi quaerat sequi quo quos. Molestias dolores blanditiis sit, ad.</p>
 			</div>
 		</article>
-	</div>
+	</div> -->
 
 
-		<div>
-			<h2 id="wine" class="section_title">Wine</h2>
+		<div class="article card wine">
+			<hr>
+			<h2 style="position: relative; left: 9.5%; padding-top: 5px; text-transform: uppercase; margin-bottom: 3em;">The Latest</h2>
+
+
+			<div class="container grid gap">
+				<div class="col-xs-12 col-md-4">
+					<img src="img/wine_01.png">
+					<span style="line-height: 7px;">
+						<h4 style="font-weight: lighter; font-size: 14px;">company name</h4>
+						<h3>Rue De La Soif</h3>
+						<p>$$$</p>
+					</span>
+				</div>
+				<div class="col-xs-12 col-md-4">
+					<img src="img/wine_02.png">
+					<span style="line-height: 7px;">
+						<h4 style="font-weight: lighter; font-size: 14px;">company name</h4>
+						<h3>Rue De La Soif</h3>
+						<p>$$$</p>
+					</span>
+				</div>
+				<div class="col-xs-12 col-md-4">
+					<img src="img/wine_03.png">
+					<span style="line-height: 7px;">
+						<h4 style="font-weight: lighter; font-size: 14px;">company name</h4>
+						<h3>Rue De La Soif</h3>
+						<p>$$$</p>
+					</span>
+				<div class="col-xs-12 col-md-4"><p><button class="block">View More Product</button></p></div>
+				</div>
+			</div>
 		</div>
 
 
-		<article class="article card wine">
-			<div class="grid-container">
-				<div class="grid-item">
+
+
+		<div class="article card wine">
+
+			<h2 id="wine" class="section_title">cheese</h2>
+			<div class="container grid gap">
+				<div class="col-xs-12 col-md-4">
 					<img src="img/wine_01.png">
-					<h3>Rue De La Soif</h3>
-					<p>$$$</p>
-					<p class="card flat">add to cart</p></div>
-				<div class="grid-item">
-					<img src="img/wine_02.png"></div>
-				<div class="grid-item">
-					<img src="img/wine_03.png"></div>
+					<span flex-stretch>
+						<h4>company name</h4>
+						<h3>Rue De La Soif</h3>
+						<p>$$$</p>
+					</span>
+				</div>
+				<div class="col-xs-12 col-md-4">
+					<img src="img/wine_02.png">
+					<span>
+						<h4>company name</h4>
+						<h3>Rue De La Soif</h3>
+						<p>$$$</p>
+					</span>
+				</div>
+				<div class="col-xs-12 col-md-4">
+					<img src="img/wine_03.png">
+					<span>
+						<h4>company name</h4>
+						<h3>Rue De La Soif</h3>
+						<p>$$$</p>
+					</span>
+				</div>
 			</div>
-		</article>
+		</div>
+
+
+
+
 
 		<div>
 			<h2 id="cheese" class="section_title">Cheese</h2>
