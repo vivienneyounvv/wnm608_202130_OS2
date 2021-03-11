@@ -6,9 +6,20 @@
 
 
 :root {
-	--color-neutral-light:#dadada;
-	--color-neutral-medium:#80a7ff;
-	--color-neutral-dark:#3d3c44;
+
+	--color-main-lighter: #e6eeff;
+	--color-main-light: #d8d8d8;
+   --color-main-medium: #aec7ff;
+   --color-main-dark: #f98001;
+
+	--color-neutral-lighter:#eaeaea;
+	--color-neutral-light:#d8d8d8;
+	--color-neutral-medium:#acb2bc;
+	--color-neutral-dark:#474a4f;
+
+/*   --color-sub-light: #efca99;
+   --color-sub-medium: #de781e;
+   --color-sub-dark: #79290b;*/
 
 	--color-white:#fff;
 	--color-black:#111;
@@ -17,7 +28,7 @@
 	--header-height: 4rem;
 
 
-	--font-sans: montserrat, Helvetica, sans-serif;
+	--font-sans: "Josefin sans", Mukata, sans-serif;
 	--font-serif: "Academy Engraved LET Plain:1.0, Georgia", serif;
 }
 
@@ -26,6 +37,7 @@ body {
 	margin: 0;
 	font-size: 100%;
 	font-family:montserrat;
+	margin-bottom: 3em;
 
 }
 
@@ -42,7 +54,7 @@ h6 {
 
 a {
 	color: inherit;
-	font-weight: bold;
+	font-weight: bolder;
 	text-decoration: none;
 }
 
@@ -60,7 +72,7 @@ a:hover {
 /* max-width: 800-1000PX */
 
 .container {
-	max-width: 1000px;  
+	max-width: 1200px;  
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -76,6 +88,7 @@ a:hover {
 .display-inline-block { display:inline-block; }
 
 .flex-stretch { flex: 1 1 auto; }
+.flex-none { flex: none; }
 
 .flex-align-center { align-items: center; }
 .flex-justify-center { justify-content: center; }
@@ -87,9 +100,31 @@ a:hover {
 
 /* COMPONENT CLASSES */
 
+
+/* NAV */
+
+.nav ul,
+.navbar ul {
+	list-style-type: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+.nav a {
+	display: block;
+	padding: 0.2em 0.5em;
+}
+
+.nav a:hover {
+	background-color: var(--color-main-medium);
+	color: var(--color-white);
+	text-decoration: none;
+}
+
+
 .navbar {
 	background-color: transparent;
-	color: #444fe4;
+	color: var(--color-main-medium);
 	line-height: var(--header-height);
 }
 
@@ -117,6 +152,17 @@ a:hover {
 }
 
 
+.nav.flex ul,
+.nav.stretch ul {
+	display: flex;
+}
+
+
+.nav.stretch li {
+	flex: 1 1 auto;
+	text-align: center;
+}
+
 
 
 hr {
@@ -129,27 +175,13 @@ hr {
 
 
 
-.section_title {
-	color: #444fe4;
-	font-family: "Montserrat";
-	font-size: 33px;
-	text-align: center;
-	padding-top: 1em;
+/* Media Image */
+.media-image {
+	max-width: 100%;
+	vertical-align: middle;
 }
 
 
-/* CARD */
-
-.card {
-	background-color: var(--color-white);
-	padding: 1.5em;
-
-	margin-bottom: 1em;
-	margin-top: 1em;
-
-	position: relative;
-	overflow: hidden;
-}
 
 
 /* STORY */
@@ -191,25 +223,55 @@ hr {
 	text-align: center;
 }
 
-.grid-item {
-	background-color: white;
-
-
-	padding: 20px;
-	background-position: center;
-	background-attachment: fixed;
+.grid_item {
+	float: left;
+	box-sizing: border-box;
+	min-height: 1px;
+	vertical-align: top;
 
 
 }
 
 
 
-/* CHEESE */
+/* Gallery */
 
-.card.cheese{
+/*
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: .4s ease;
+	background-color: var(--color-main-medium)
+}
+
+.container:hover .overlay {
+	opacity: 1;
+}
+
+.gallery-text {
+	color: var(--color-white);
+	font-size: 17px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+}*/
+
+
+/* CARD */
+
+.card {
 	background-color: var(--color-white);
 	padding: 1.5em;
-	box-shadow: 1px 1px 18px rgb(0, 0, 0, 10%);
 
 	margin-bottom: 1em;
 	margin-top: 1em;
@@ -218,8 +280,6 @@ hr {
 	overflow: hidden;
 }
 
-
-/* CARD */
 
 .card.soft {
 	border-radius: 1em;
@@ -233,29 +293,34 @@ hr {
 }
 
 .card.dark {
-	background-color: var(--color-neutral-dark);
+	background-color: var(--color-main-dark);
 	color: var(--color-white);
+	max-width: 700px;
+	flex: 1 1 auto;
+}
+
+.card.lighter {
+	background-color: var(--color-main-lighter);
 }
 
 .card.medium {
-	background-color: var(--color-neutral-medium);
-	color: var(--color-white);
+	background-color: var(--color-main-medium);
+}
+
+
+.card.rainbow {
+	background-image: linear-gradient(130deg, #ff00a2, blue, #00ff99, #ebbf00);
 }
 
 .card.flat {
-	border-radius: 55px;
-	border: 1px solid #444fe4;
-	color: #444fe4;
+	padding: 0;
 }
 
-.card.flat:hover {
-	background-color: #444fe4;
-	color: white;
-}
-
-
-.card>:first-child { margin-top: 35px; }
+.card>:first-child { margin-top: 20px; }
 .card>:last-child { margin-bottom: 0; }
+
+
+
 
 
 /* WELL */
@@ -281,7 +346,20 @@ hr {
 }
 
 
+.wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+}
 
 
+.subscribe {
+
+}
+
+
+.footer-text:hover {
+	text-decoration: underline;
+	color: white;
+}
 
 
